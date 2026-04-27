@@ -279,3 +279,246 @@ textarea:focus {
         width: 100%;
     }
 }
+/* Wireframe Pages */
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #111111;
+}
+
+.wire-hero {
+    margin: 15px 20px;
+    padding: 35px 20px;
+    border: 2px solid #d8d4ce;
+    background-color: #f7f4ef;
+    text-align: center;
+}
+
+.wire-hero h2 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
+.wire-hero p {
+    max-width: 560px;
+    margin: 10px auto 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.film-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.film-hero::before {
+    content: "🎞️";
+    position: absolute;
+    left: 35px;
+    bottom: 15px;
+    font-size: 5rem;
+    opacity: 0.25;
+}
+
+.film-hero::after {
+    content: "🎬";
+    position: absolute;
+    right: 45px;
+    bottom: 15px;
+    font-size: 5rem;
+    opacity: 0.25;
+}
+
+.wire-main {
+    margin: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #d8d4ce;
+}
+
+.wire-title {
+    margin: 0 0 25px;
+    padding: 13px;
+    border: 2px solid #d8d4ce;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 28px;
+}
+
+.genre-box h3,
+.film-box h3 {
+    margin: 0 0 15px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #d8d4ce;
+    font-size: 1.75rem;
+    font-weight: normal;
+}
+
+.two-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.three-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.wire-card {
+    border: 2px solid #d8d4ce;
+    background-color: #fcfbf8;
+    text-align: center;
+    padding: 12px;
+}
+
+.wire-card img {
+    width: 100%;
+    height: 125px;
+    object-fit: contain;
+    display: block;
+    border: 1px solid #c9c4bd;
+    background-color: #ffffff;
+    padding: 6px;
+}
+
+.wire-card h4 {
+    margin: 10px 0 6px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d8d4ce;
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.wire-card p {
+    margin: 0;
+    color: #7f9b84;
+    font-size: 1rem;
+}
+
+.film-box {
+    margin-bottom: 30px;
+}
+
+.film-card img {
+    height: 135px;
+}
+
+.film-card p {
+    color: #333333;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+/* Mobile version */
+
+@media (max-width: 900px) {
+    .genre-grid,
+    .two-cards,
+    .three-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .wire-hero h2 {
+        font-size: 2rem;
+    }
+
+    .film-hero::before,
+    .film-hero::after {
+        display: none;
+    }
+}
+.wire-card h4 {
+    margin: 12px 0 0;
+}
+details {
+    margin-top: 10px;
+    text-align: left;
+}
+
+summary {
+    cursor: pointer;
+    background-color: #7f9b84;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+summary:hover {
+    background-color: #6f8a73;
+}
+
+details p {
+    margin: 10px 0 0;
+    padding: 10px;
+    border: 1px solid #d8d4ce;
+    background-color: #f7f4ef;
+    color: #333333;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+/* Dropdown container */
+details {
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Sleek button */
+summary {
+    cursor: pointer;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #7f9b84;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #d8d4ce;
+    text-align: center;
+    transition: all 0.25s ease;
+    list-style: none;
+}
+
+/* Remove default arrow */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom arrow */
+summary::after {
+    content: "▾";
+    margin-left: 6px;
+    font-size: 0.8rem;
+    transition: transform 0.25s ease;
+}
+
+/* Rotate arrow when open */
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+/* Hover effect */
+summary:hover {
+    color: #111111;
+    border-bottom: 1px solid #7f9b84;
+}
+
+/* Dropdown text */
+details p {
+    margin: 10px 0 0;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333333;
+    border-top: 1px solid #ece7df;
+}
